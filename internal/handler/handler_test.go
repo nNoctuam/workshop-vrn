@@ -22,7 +22,7 @@ func TestHandler_Hello(t *testing.T) {
 	}{
 		{
 			name:     "simple test",
-			joke:     &api.JokeResponse{"test joke"},
+			joke:     &api.JokeResponse{Joke: "test joke"},
 			err:      nil,
 			codeWant: 200,
 			bodyWant: "test joke",
