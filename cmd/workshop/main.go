@@ -14,6 +14,11 @@ func main() {
 	r := chi.NewRouter()
 	r.Get("/", h.Hello)
 
+	log.Printf("starting server")
 	err := http.ListenAndServe(":8080", r)
-	log.Fatal(err)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Printf("shutting server down")
 }
